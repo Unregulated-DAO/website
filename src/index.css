@@ -11,17 +11,9 @@ body {
 }
 .vega-content {
   margin: 0 auto;
-  width: 600px;
-}
-@media only screen and (max-width: 800px) {
-  .vega-content {
-    width: 400px;
-  }
-}
-@media only screen and (max-width: 500px) {
-  .vega-content {
-    width: 280px;
-  }
+  max-width: 600px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 .footer-text {
   font-size: 12px;
