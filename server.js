@@ -19,3 +19,11 @@ https.createServer({
 }, app).listen(PORT, () => {
     console.log("Express server listening on port " + PORT);
 });
+
+
+const domain = 'taki.trading';
+const httpServer = express();
+httpServer.use(function(req, res) {
+    res.redirect('https://' + domain + req.originalUrl);
+});
+httpServer.listen(80);
