@@ -1,13 +1,21 @@
 const express = require('express');
 const path = require('path');
+const https = require('https');
+const fs = require('fs');
  
 const app = express();
-const PORT = 3000;
+const PORT = 443;
 
 app.use(express.static(path.join(__dirname, 'build')));
 
 app.get('*', (req, res) => res.sendFile(path.resolve('build', 'index.html')));
  
-app.listen(PORT, () => {
-    console.log(`Server Established at PORT->${PORT}`);
+const privateKey = fs.readFileSync('private.key');
+const certificate = fs.readFileSync('certificate.crt');
+
+https.createServer({
+    key: privateKey,
+    cert: certificate
+}, app).listen(PORT, () => {
+    console.log("Express server listening on port " + PORT);
 });

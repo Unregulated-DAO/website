@@ -13,6 +13,16 @@ body {
   margin: 0 auto;
   width: 600px;
 }
+@media only screen and (max-width: 800px) {
+  .vega-content {
+    width: 400px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .vega-content {
+    width: 280px;
+  }
+}
 .footer-text {
   font-size: 12px;
 }
