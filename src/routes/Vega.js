@@ -28,7 +28,6 @@ const Vega = () => {
       try {
         const tx = await contract.approve(VEGA_ADDRESS, tetherAmount);
         const result = await tx.wait();
-        setSuccessHash(result.hash);
       } catch(e) {
         setErrorMessage(e.reason);
       }
@@ -94,7 +93,7 @@ const Vega = () => {
       <div className="vega-content">
         <p>The Taki network will offer a superior trading experience to retail traders by rethinking DEX architecture, inspired by the popular retail trading product contracts-for-difference ("<strong>CFDs</strong>").</p>
         <p>In order to offer CFD-like products onchain, Taki will depend on a robust futures DEX that is censorship-resistant and with limitless potential for market creation.</p>
-        <p>I have set out in detail why Vega is the best DEX to offer the infrastructure needed for Taki to succeed in <a href="">this forum post</a>.</p>
+        <p>I have set out in detail why Vega is the best DEX to offer the infrastructure needed for Taki to succeed in <a href="https://community.vega.xyz/t/vgt2-funding-request-to-seed-innovative-markets-on-vega-and-immediately-commence-much-needed-marketing-activity/4531" target="_blank">this forum post</a>.</p>
         <p>This page is set up to allow supporters of Vega and the broader collaboration between both projects to make donations in USDT(*).</p>
         <hr />
         {renderPurchaseForm()}
