@@ -17,11 +17,13 @@ const Vega = () => {
     const result = await contract.allowance(signer.address, VEGA_ADDRESS);
     const allowance = Number(result);
     if(allowance < tetherAmount) {
-      try {
-        const tx = await contract.approve(VEGA_ADDRESS, 0);
-        const result = await tx.wait();
-      } catch(e) {
-        setErrorMessage(e.reason);
+      if(allowance > 0) {
+        try {
+          const tx = await contract.approve(VEGA_ADDRESS, 0);
+          const result = await tx.wait();
+        } catch(e) {
+          setErrorMessage(e.reason);
+        }
       }
       try {
         const tx = await contract.approve(VEGA_ADDRESS, tetherAmount);
