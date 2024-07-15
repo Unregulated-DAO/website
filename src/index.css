@@ -1,19 +1,18 @@
 body {
-  font-family: "Cutive Mono", monospace;
+  font-family: 'Noto Sans';
   font-weight: 400;
   font-style: normal;
   text-align: center;
-  padding-top: 150px;
-  padding-bottom: 150px;
+  padding: 0;
+  margin: 0;
+  background-color: #1E1E1E;
+  color: rgba(255, 255, 255, 0.75);
 }
 .grey {
   color: #666;
 }
 .vega-content {
   margin: 0 auto;
-  max-width: 600px;
-  padding-left: 20px;
-  padding-right: 20px;
 }
 .footer-text {
   font-size: 12px;
@@ -27,5 +26,24 @@ body {
   font-weight: 600;
 }
 h2 {
-  color: #666;
+  color: rgba(255, 255, 255, 1);
+  font-family: 'Noto Sans';
+}
+.cover {
+  background-image: url('../src/japan.jpg');
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  padding-top: 150px;
+  padding-bottom: 150px;
+}
+.cover img {
+  height: 400px;
+}
+.vega-content h2 {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.vega-content p {
+  margin-bottom: 100px;
 }
