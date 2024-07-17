@@ -12,6 +12,7 @@ body {
   background-image: url("../public/assets/images/japan.jpg");
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
 }
 .grey {
   color: #666;
